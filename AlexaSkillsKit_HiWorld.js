@@ -115,11 +115,12 @@ function getWelcomeResponse(callback) {
              buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
-function sayHi(callback){
+function sayHi(intent,session,callback){
     var sessionAttributes = {};
     var cardTitle = "Hi World!";
+    var repromptText=null;
         
-    var speechOutput = "Hi World!"
+    var speechOutput = "Hi World!";
     
     var shouldEndSession = true;
     
