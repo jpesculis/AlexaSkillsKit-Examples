@@ -76,8 +76,8 @@ function onIntent(intentRequest, session, callback) {
         intentName = intentRequest.intent.name;
 
     // Dispatch to your skill's intent handlers
-    if ("HiWorld" === intentName) {
-        hiWorld(intent, session, callback);
+    if ("SayHi" === intentName) {
+        sayHi(intent, session, callback);
     } else if ("HelpIntent" === intentName) {
         getWelcomeResponse(callback);
     }else{
@@ -115,7 +115,7 @@ function getWelcomeResponse(callback) {
              buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
-function hiWorld(callback){
+function sayHi(callback){
     var sessionAttributes = {};
     var cardTitle = "Hi World!";
         
