@@ -129,10 +129,10 @@ function testGet(response) {
     };
 
     http.get(options, function (res) {
-        console.log("Got response: " + res.statusCode);
+        console.log("Response: " + res.statusCode);
         response(res.statusCode);
     }).on('error', function (e) {
-        console.log("Got error message is: " + e.message);
+        console.log("Error message: " + e.message);
     });
 
 }
